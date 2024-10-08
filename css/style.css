@@ -2,10 +2,30 @@ body{
     font-family: "Changa One", sans-serif;
     font-style: normal;
     text-transform: uppercase;
-    background-color: #234059;
+    height: 100dvh;
     color: white;
+    letter-spacing: 3px;
+    position: relative;
+
 }
 
-a{
+a, a:visited{
     text-decoration: none;
+    color: #ffffff;
+}
+
+html{
+    background-image: linear-gradient(#888C80, #234059, #0D2340, #081826) ;
+
+}
+
+footer{
+        color: white;
+        text-shadow: 1px 1px black;
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+        text-align: right;
+        z-index: 99;
+        
 }
