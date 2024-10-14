@@ -1,23 +1,260 @@
-body{
+/* universal styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html{
+    background-image: linear-gradient(#888C80, #234059, #0D2340, #081826);
     font-family: "Changa One", sans-serif;
     font-style: normal;
     text-transform: uppercase;
-    height: 100dvh;
-    color: white;
     letter-spacing: 3px;
+    color: white;
+    font-size: 28px;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 
 }
 
 a, a:visited{
     text-decoration: none;
     color: #ffffff;
+} 
+
+
+/* index page */
+/* feather animations */
+@keyframes feather{
+    0%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    25%{
+        opacity: 1;
+        transform: translateX(50px), translateY(100px);
+    }
 }
 
-html{
-    background-image: linear-gradient(#888C80, #234059, #0D2340, #081826) ;
+#feather{
+    display: inline-block; 
+    animation: feather 3s forwards;
+}
+
+
+
+/* stick together animations*/
+@keyframes stickFirst {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px); 
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(-150px); 
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-50); 
+        color: lightblue;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+        color: lightblue;
+    }
+}
+
+@keyframes togetherSecond {
+    0% {
+        opacity: 0;
+        transform: translateX(150px); 
+    }
+    25% {
+        opacity: 0;
+        transform: translateX(50px); 
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0); 
+        color: lightblue;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+        color: lightblue;
+    }
+}
+
+#stickFirst {
+    display: inline-block; 
+    animation: stickFirst 3s forwards ease-in-out;
+}
+
+#togetherSecond {
+    display: inline-block; 
+    animation: togetherSecond 3s forwards ease-in-out;
+  
+}
+
+
+/* line 3 animations */
+
+#rotate{
+    position: absolute;
+    -webkit-animation:rotateDie 1s linear forwards;
+    -moz-animation:rotateDie 1s linear forwards;
+    animation:rotateDie 1s linear forwards;
+}
+@-moz-keyframes rotateDie { 
+    100% { -moz-transform: rotate(90deg); } 
+}
+@-webkit-keyframes rotateDie { 
+    100% { -webkit-transform: rotate(90deg); } 
+}
+@keyframes rotateDie { 
+    100% { 
+        -webkit-transform: rotate(90deg); 
+        transform: rotate(90deg); 
+        color: black;
+    } 
+}
+
+
+/* line 4 & 5 animations */
+#alone{
+    display: inline-block;
+    animation: alone 2s forwards;
+}
+
+@keyframes alone{
+    0%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(200px);
+    }
+}
+
+#glow {
+    animation: glow 1s forwards infinite;
+    display: inline-block;
+}
+    
+      
+@keyframes glow {
+    0%{
+        color: #ffffff;
+        text-shadow: none;
+    }
+    100%{
+        color: #ffffff;
+        text-shadow: 0 0 50px yellow;
+        }
+}
+
+#eyesOne{
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 4s;
+  
+  
+  }
+
+#eyesOne:hover{
+    transform: scale(3) translate(100px, 100px);
+    -webkit-transform: scale(3) translate(100px, 100px);
+    -moz-transform: scale(3) translate(100px, 100px);
+    -ms-transform: scale(3) translate(100px, 100px);
+    -o-transform: scale(3) translate(100px, 100px);
 
 }
+
+
+/* line 6 & 8 animations */
+#foreverOne{
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 4s;
+}
+
+#foreverOne:hover{
+    transform: scale(0.5) ;
+    -webkit-transform: scale(0.5) ;
+    -moz-transform: scale(0.5) ;
+    -ms-transform: scale(0.5) ;
+    -o-transform: scale(0.5) ;
+
+}
+
+
+
+/* line 9 & 10 animations */
+
+#better{
+    animation: better 3s forwards;
+    display: inline-block;
+}
+
+@keyframes better{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(3) translate(50px, 50px);
+        }
+}
+
+
+/* line 11 & 12 animations */
+
+
+
+
+/* line 13 animations */
+#love:hover{
+    color: red;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+
+}
+
+#surprised{
+    animation: surprised 2s forwards ease-in;
+    animation-delay: 1s;
+}
+@keyframes surprised {
+    0% {
+        opacity: 0;
+        transform: translate(100px, 100px); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(300px, 300px); 
+   
+    }
+}
+
 
 footer{
         color: white;
@@ -29,3 +266,6 @@ footer{
         z-index: 99;
         
 }
+
+
+
