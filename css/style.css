@@ -35,23 +35,44 @@ a, a:visited{
 
 /* index page */
 /* feather animations */
+#feather{
+    display: inline-block;
+    animation: feather 3s forwards;
+    animation-delay: 2s;
+    color: antiquewhite;
+}
+
 @keyframes feather{
     0%{
         opacity: 1;
-        transform: translateY(0px);
+        transform: translate(0px, 0px);
     }
 
-    25%{
+    75%{
         opacity: 1;
-        transform: translateX(50px), translateY(100px);
+        transform: translate(300px, -300px);
     }
 }
 
-#feather{
-    display: inline-block; 
-    animation: feather 3s forwards;
+
+/* #birds{
+    animation: fadeIn 3s forwards;
+} */
+
+
+#fadeIn{
+    display: inline-block;
+    animation: fadeIn 3s forwards;
 }
 
+@keyframes fadeIn{
+    0%{
+        margin-left: -1200px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
 
 
 /* stick together animations*/
@@ -105,29 +126,23 @@ a, a:visited{
 #togetherSecond {
     display: inline-block; 
     animation: togetherSecond 3s forwards ease-in-out;
-  
 }
 
 
 /* line 3 animations */
 
-#rotate{
-    position: absolute;
-    -webkit-animation:rotateDie 1s linear forwards;
-    -moz-animation:rotateDie 1s linear forwards;
-    animation:rotateDie 1s linear forwards;
+#rotateDie{
+    animation: rotateDie 1s forwards;
+    animation-delay: 3s;
 }
-@-moz-keyframes rotateDie { 
-    100% { -moz-transform: rotate(90deg); } 
-}
-@-webkit-keyframes rotateDie { 
-    100% { -webkit-transform: rotate(90deg); } 
-}
+
 @keyframes rotateDie { 
+    0%{
+        transform: rotate(0deg);
+    }
     100% { 
-        -webkit-transform: rotate(90deg); 
-        transform: rotate(90deg); 
-        color: black;
+        transform: rotate(360deg); 
+        color: gray; 
     } 
 }
 
@@ -136,6 +151,7 @@ a, a:visited{
 #alone{
     display: inline-block;
     animation: alone 2s forwards;
+    animation-delay: 2s;
 }
 
 @keyframes alone{
@@ -151,6 +167,7 @@ a, a:visited{
 
 #glow {
     animation: glow 1s forwards infinite;
+    animation-delay: 2s;
     display: inline-block;
 }
     
@@ -167,46 +184,49 @@ a, a:visited{
 }
 
 #eyesOne{
-    cursor: pointer;
     display: inline-block;
-    transition-duration: 4s;
+    animation: eyesOne 4s forwards;
+    animation-delay: 4s;
+
   
   
   }
 
-#eyesOne:hover{
-    transform: scale(3) translate(100px, 100px);
-    -webkit-transform: scale(3) translate(100px, 100px);
-    -moz-transform: scale(3) translate(100px, 100px);
-    -ms-transform: scale(3) translate(100px, 100px);
-    -o-transform: scale(3) translate(100px, 100px);
+  @keyframes eyesOne {
+    0%{
+        transform: scale(1) translate(0px,0px);
 
-}
+    }
+    100%{
+        transform: scale(3) translate(100px, 100px);
+
+    }
+  }
+
 
 
 /* line 6 & 8 animations */
 #foreverOne{
-    cursor: pointer;
     display: inline-block;
-    transition-duration: 4s;
+    animation: foreverOne 4s forwards;
 }
 
-#foreverOne:hover{
-    transform: scale(0.5) ;
-    -webkit-transform: scale(0.5) ;
-    -moz-transform: scale(0.5) ;
-    -ms-transform: scale(0.5) ;
-    -o-transform: scale(0.5) ;
-
+@keyframes foreverOne{
+    0%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(0.5);
+    }
 }
-
-
 
 /* line 9 & 10 animations */
 
 #better{
     animation: better 3s forwards;
+    animation-delay: 3s;
     display: inline-block;
+    
 }
 
 @keyframes better{
@@ -227,15 +247,22 @@ a, a:visited{
 
 
 
-/* line 13 animations */
-#love:hover{
-    color: red;
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
 
+
+/* line 13 animations */
+#love{
+    animation: love 2s forwards;
+    
+}
+
+@keyframes love{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(2);
+        color: red;
+    }
 }
 
 #surprised{
