@@ -134,17 +134,35 @@ a, a:visited{
 #rotateDie{
     animation: rotateDie 1s forwards;
     animation-delay: 3s;
+    display: inline-block;
 }
 
 @keyframes rotateDie { 
     0%{
-        transform: rotate(0deg);
+        transform: scale(0);
+        text-shadow: none;
     }
     100% { 
-        transform: rotate(360deg); 
-        color: gray; 
+        transform: scale(3) translateX(100px); 
+        color: #BE0000; 
+        text-shadow: 0 0 60px #BE0000;
     } 
 }
+
+
+/* #fadeInOut{
+    display: inline-block;
+    animation: fadeIn 3s forwards ease-in-out;
+}
+
+@keyframes fadeIn{
+    0%{
+        margin-left: -1200px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+} */
 
 
 /* line 4 & 5 animations */
@@ -261,7 +279,7 @@ a, a:visited{
     }
     100%{
         transform: scale(2);
-        color: red;
+        color: #ff2525;
     }
 }
 
