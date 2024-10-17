@@ -1,4 +1,4 @@
-/* universal styles */
+/* ======= universal styles ======== */
 *{
     margin: 0;
     padding: 0;
@@ -33,11 +33,11 @@ a, a:visited{
 } 
 
 
-/* index page */
+/* ======== index page ======== */
 /* feather animations */
 #feather{
     display: inline-block;
-    animation: feather 3s forwards;
+    animation: feather 4s forwards;
     animation-delay: 2s;
     color: antiquewhite;
 }
@@ -60,12 +60,12 @@ a, a:visited{
 } */
 
 
-#fadeIn{
+#fadeInOne{
     display: inline-block;
-    animation: fadeIn 3s forwards;
+    animation: fadeInOne 3s forwards;
 }
 
-@keyframes fadeIn{
+@keyframes fadeInOne{
     0%{
         margin-left: -1200px;
     }
@@ -129,43 +129,71 @@ a, a:visited{
 }
 
 
-/* line 3 animations */
+/* ======== line 3 animations ======== */
 
-#rotateDie{
-    animation: rotateDie 1s forwards;
-    animation-delay: 3s;
+#dieAnimate{
+    animation: dieAnimate 4s forwards ease-in;
+    animation-delay: 2s;
     display: inline-block;
+    opacity: 0;
 }
 
-@keyframes rotateDie { 
+@keyframes dieAnimate { 
     0%{
-        transform: scale(0);
-        text-shadow: none;
+        opacity: 0;
+        transform: scale(3) translate(-100px,0px); 
+
     }
+    25%{
+        opacity: 0;
+        transform: scale(3) translate(-100px,0px); 
+
+    } 
+    50%{
+        opacity: 0;
+        transform: scale(3) translate(-100px,0px); 
+
+    }
+    75%{
+        opacity: 0;
+        transform: scale(3) translate(-100px,0px); 
+
+    }
+
     100% { 
-        transform: scale(3) translateX(100px); 
+        opacity: 1;
+        transform: scale(3) translate(-100px,0px); 
         color: #BE0000; 
         text-shadow: 0 0 60px #BE0000;
     } 
 }
 
 
-/* #fadeInOut{
+#fadeInOut{
     display: inline-block;
-    animation: fadeIn 3s forwards ease-in-out;
+    animation: fadeIn 5s forwards ease-in-out;
 }
 
 @keyframes fadeIn{
     0%{
-        margin-left: -1200px;
+        opacity: 0;
+       
     }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+
     100%{
-        margin-left: 0px;
+        opacity: 0;
+        
     }
-} */
+}
 
 
-/* line 4 & 5 animations */
+/* ======== line 4 & 5 animations ======== */
 #alone{
     display: inline-block;
     animation: alone 2s forwards;
@@ -223,10 +251,68 @@ a, a:visited{
 
 
 
-/* line 6 & 8 animations */
+/* ======== line 6 & 8 animations ======== */
+.weather{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+}
+
+.weatherOne{
+    position: relative;
+    margin: 0 10px;
+    opacity: 0;
+    animation: weatherOne 3s forwards;
+    animation-delay: 3s;
+}
+
+.weatherOne:nth-child(1) { 
+    animation-duration: 1.9s;
+  }
+
+.weatherOne:nth-child(2) { 
+    animation-duration: 2.5s;
+  }
+
+.weatherOne:nth-child(3) { 
+    animation-duration: 3s;
+  }
+
+.weatherOne:nth-child(4) { 
+    animation-duration: 3.5s;
+  }
+.weatherOne:nth-child(5) { 
+    animation-duration: 4s;
+  }
+.weatherOne:nth-child(6) { 
+    animation-duration: 4.5s;
+  }
+
+.weatherOne:nth-child(7) { 
+    animation-duration: 5s;
+  }
+
+
+@keyframes weatherOne {
+    0%{
+        transform: translateY(-500px) ;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+        color: #888C80;
+    }
+}
+
 #foreverOne{
     display: inline-block;
     animation: foreverOne 4s forwards;
+    animation-delay: 7s;
 }
 
 @keyframes foreverOne{
@@ -238,7 +324,110 @@ a, a:visited{
     }
 }
 
-/* line 9 & 10 animations */
+.fadeInTwo{
+    display: inline-block;
+    animation: fadeInTwo 5s forwards ease-in;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+@keyframes fadeInTwo{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+    
+}
+
+.fadeInThree{
+    display: inline-block;
+    animation: fadeInTwo 5s forwards ease-in;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+@keyframes fadeInTwo{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+    
+}
+
+#dieAnimateTwo{
+    animation: dieAnimateTwo 4s forwards ease-in;
+    animation-delay: 7s;
+    display: inline-block;
+    opacity: 0;
+}
+
+@keyframes dieAnimateTwo { 
+    0%{
+        opacity: 0;
+        transform: scale(3) translate(-50px,0px); 
+
+    }
+    25%{
+        opacity: 0;
+        transform: scale(3) translate(-50px,0px); 
+
+    } 
+    50%{
+        opacity: 0;
+        transform: scale(3) translate(-50px,0px); 
+
+    }
+    75%{
+        opacity: 0;
+        transform: scale(3) translate(-50px,0px); 
+
+    }
+
+    100% { 
+        opacity: 1;
+        transform: scale(3) translate(-50px,30px); 
+        color: #BE0000; 
+        text-shadow: 0 0 60px #BE0000;
+    } 
+}
+
+
+/* ======== line 9 & 10 animations ======== */
+
+#foreverTwo{
+    display: inline-block;
+    animation: foreverTwo 4s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes foreverTwo{
+0%{
+    color: #ffffff;
+}
+100%{
+    color: antiquewhite;
+}
+}
 
 #better{
     animation: better 3s forwards;
@@ -249,25 +438,24 @@ a, a:visited{
 
 @keyframes better{
     0%{
-        opacity: 1;
         transform: scale(1);
     }
 
     100%{
-        opacity: 1;
         transform: scale(3) translate(50px, 50px);
+        color: lightblue;
         }
 }
 
 
-/* line 11 & 12 animations */
+/* ======== line 11 & 12 animations ======== */
 
 
 
 
 
 
-/* line 13 animations */
+/* ======== line 13 animations ======== */
 #love{
     animation: love 2s forwards;
     
@@ -295,7 +483,7 @@ a, a:visited{
 
     100% {
         opacity: 1;
-        transform: translate(300px, 300px); 
+        transform: translate(300px, 200px); 
    
     }
 }
