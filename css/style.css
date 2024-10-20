@@ -33,6 +33,120 @@ a, a:visited{
 } 
 
 
+/* ==================== fade in animations ======================= */
+#fadeInOne{
+    display: inline-block;
+    animation: fadeInOne 3s forwards;
+}
+
+@keyframes fadeInOne{
+    0%{
+        margin-left: -1200px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
+#fadeInOut{
+    display: inline-block;
+    animation: fadeIn 5s forwards ease-in-out;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+       
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        
+    }
+}
+
+.fadeInTwo{
+    display: inline-block;
+    animation: fadeInTwo 5s forwards ease-in;
+    animation-delay: 3s;
+    opacity: 0;
+}
+
+@keyframes fadeInTwo{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+    
+}
+
+.fadeInThree{
+    display: inline-block;
+    animation: fadeInThree 5s forwards ease-in;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+@keyframes fadeInThree{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+    
+}
+
+.fadeInFour{
+    display: flex;
+    animation: fadeInFour 5s forwards ease-in;
+    animation-delay: 6s;
+    opacity: 0;
+}
+
+@keyframes fadeInFour{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+    
+}
+
+
 /* ======== index page ======== */
 /* feather animations */
 #feather{
@@ -60,19 +174,7 @@ a, a:visited{
 } */
 
 
-#fadeInOne{
-    display: inline-block;
-    animation: fadeInOne 3s forwards;
-}
 
-@keyframes fadeInOne{
-    0%{
-        margin-left: -1200px;
-    }
-    100%{
-        margin-left: 0px;
-    }
-}
 
 
 /* stick together animations*/
@@ -169,28 +271,7 @@ a, a:visited{
 }
 
 
-#fadeInOut{
-    display: inline-block;
-    animation: fadeIn 5s forwards ease-in-out;
-}
 
-@keyframes fadeIn{
-    0%{
-        opacity: 0;
-       
-    }
-    25%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 1;
-    }
-
-    100%{
-        opacity: 0;
-        
-    }
-}
 
 
 /* ======== line 4 & 5 animations ======== */
@@ -252,6 +333,7 @@ a, a:visited{
 
 
 /* ======== line 6 & 8 animations ======== */
+/* https://css-tricks.com/different-approaches-for-creating-a-staggered-animation/ */
 .weather{
         position: relative;
         display: flex;
@@ -324,55 +406,7 @@ a, a:visited{
     }
 }
 
-.fadeInTwo{
-    display: inline-block;
-    animation: fadeInTwo 5s forwards ease-in;
-    animation-delay: 3s;
-    opacity: 0;
-}
 
-@keyframes fadeInTwo{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-
-    
-}
-
-.fadeInThree{
-    display: inline-block;
-    animation: fadeInTwo 5s forwards ease-in;
-    animation-delay: 6s;
-    opacity: 0;
-}
-
-@keyframes fadeInTwo{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-
-    100%{
-        opacity: 1;
-    }
-
-    
-}
 
 #dieAnimateTwo{
     animation: dieAnimateTwo 4s forwards ease-in;
@@ -449,10 +483,191 @@ a, a:visited{
 
 
 /* ======== line 11 & 12 animations ======== */
+/* https://fossheim.io/writing/posts/react-text-splitting-animations/ */
+.life{
+    color: tomato;
+    display: inline-flex;
+    position: relative;
+    bottom: -1em;
+    opacity: 0;
+    animation: lifeOne 0.75s forwards infinite;
+    animation-delay: 4s;
+  }
+
+  .lifeOne:nth-child(2n) { color: lightseagreen; }
+  .lifeOne:nth-child(3n) { color: orange; }
+  .lifeOne:nth-child(4n) { color: dodgerblue; }
+  .lifeOne:nth-child(5n) { color: blueviolet; }
+  
+  @keyframes lifeOne {
+    0% {
+      bottom: -0.2em;
+      opacity: 1;
+    }
+    
+    50% {
+      bottom: 0.4em;
+    }
+  
+    100% {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
 
 
 
 
+#eyesPosOne {
+    position: absolute;
+    display: flex;
+    top: 500px;
+    left: 60%;
+    opacity: 0;
+    color: lightblue;
+    animation: eyesPosOne 5s forwards infinite ease-in;
+    animation-direction: both;
+    animation-delay: 12s;
+}
+
+@keyframes eyesPosOne {
+    0%{
+        opacity: 0;
+        left: 60%;
+        transform: scale(1.25);
+        color: lightblue;
+    }
+    50%{
+        opacity: 1;
+        left: 65%;
+        transform: scale(1.5);
+        color: lightblue;
+       
+    }
+    100%{
+        opacity: 1;
+        left: 60%;
+        transform: scale(1.75);
+        color: lightblue;
+      
+    }
+    
+}
+
+#eyesPosTwo{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    color: lightblue;
+    top: 500px;
+    left: 65%;
+    animation: eyesPosTwo 5s forwards infinite ease-in;
+    animation-direction: both;
+    animation-delay: 12s;
+}
+
+
+
+@keyframes eyesPosTwo {
+    0%{
+        opacity: 0;
+        left: 65%;
+        transform: scale(1.25);
+        color: lightblue;
+    }
+    50%{
+        opacity: 1;
+        left: 70%;
+        transform: scale(1.5);
+        color: lightblue;
+       
+
+    }
+    100%{
+        opacity: 1;
+        left: 65%;
+        transform: scale(1.75);
+        color: lightblue;
+        
+    }
+    
+}
+
+#eyesPosThree{
+    position: absolute;
+    display: flex;
+    color: lightblue;
+    opacity: 0;
+    top: 500px;
+    left: 70%;
+    animation: eyesPosThree 5s forwards infinite ease-in;
+    animation-direction: both;
+    animation-delay: 12s;
+}
+
+@keyframes eyesPosThree {
+    0%{
+        opacity: 0;
+        left: 70%;
+        transform: scale(1.25);
+        color: lightblue;
+    }
+    50%{
+        opacity: 1;
+        left: 75%;
+        transform: scale(1.5);
+        color: lightblue;
+        
+    }
+    100%{
+        opacity: 1;
+        left: 70%;
+        transform: scale(1.75);
+        color: lightblue;
+        
+
+    }
+    
+}
+
+#eyesPosFour{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    color: lightblue;
+    top: 500px;
+    left: 75%;
+    animation: eyesPosFour 5s forwards infinite ease-in;
+    animation-direction: both;
+    animation-delay: 12s;
+}
+
+@keyframes eyesPosFour {
+    0%{
+        opacity: 0;
+        top: 500px;
+        left: 75%;
+        transform: scale(1.25);
+        color: lightblue;
+    }
+    50%{
+        opacity: 1;
+        left: 80%;
+        transform: scale(1.5);
+        color: lightblue;
+        
+
+    }
+    100%{
+        opacity: 1;
+        left: 75%;
+        transform: scale(1.75);
+        color: lightblue;
+
+
+    }
+    
+}
 
 
 /* ======== line 13 animations ======== */
