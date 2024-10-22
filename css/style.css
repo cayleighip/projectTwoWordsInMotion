@@ -311,6 +311,7 @@ a, a:visited{
     display: inline-block;
     animation: eyesOne 3s forwards;
     animation-delay: 5s;
+    opacity: 0;
 
   
   
@@ -319,10 +320,22 @@ a, a:visited{
   @keyframes eyesOne {
     0%{
         color: white;
+        opacity: 0;
+        transform: scale(0);
 
     }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+
     100%{
         color: lightblue;
+        opacity: 1;
+        transform: scale(2) translate(30px, 8px);
 
     }
   }
