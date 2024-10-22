@@ -124,7 +124,7 @@ a, a:visited{
 .fadeInFour{
     display: flex;
     animation: fadeInFour 5s forwards ease-in;
-    animation-delay: 6s;
+    animation-delay: 1s;
     opacity: 0;
 }
 
@@ -169,15 +169,10 @@ a, a:visited{
 }
 
 
-/* #birds{
-    animation: fadeIn 3s forwards;
-} */
-
-
-
 
 
 /* stick together animations*/
+
 @keyframes stickFirst {
     0% {
         opacity: 0;
@@ -220,15 +215,17 @@ a, a:visited{
     }
 }
 
-#stickFirst {
+#stickFirst{
     display: inline-block; 
     animation: stickFirst 3s forwards ease-in-out;
 }
+
 
 #togetherSecond {
     display: inline-block; 
     animation: togetherSecond 3s forwards ease-in-out;
 }
+
 
 
 /* ======== line 3 animations ======== */
@@ -278,7 +275,7 @@ a, a:visited{
 #alone{
     display: inline-block;
     animation: alone 2s forwards;
-    animation-delay: 2s;
+    animation-delay: 3s;
 }
 
 @keyframes alone{
@@ -288,32 +285,32 @@ a, a:visited{
     }
     100%{
         opacity: 1;
-        transform: translateX(200px);
+        transform: translateX(100px);
     }
 }
 
 #glow {
     animation: glow 1s forwards infinite;
-    animation-delay: 2s;
+    animation-delay: 4.5s;
     display: inline-block;
 }
     
       
 @keyframes glow {
     0%{
-        color: #ffffff;
+        color: white;
         text-shadow: none;
     }
     100%{
-        color: #ffffff;
+        color: yellow;
         text-shadow: 0 0 50px yellow;
         }
 }
 
 #eyesOne{
     display: inline-block;
-    animation: eyesOne 4s forwards;
-    animation-delay: 4s;
+    animation: eyesOne 3s forwards;
+    animation-delay: 5s;
 
   
   
@@ -321,11 +318,11 @@ a, a:visited{
 
   @keyframes eyesOne {
     0%{
-        transform: scale(1) translate(0px,0px);
+        color: white;
 
     }
     100%{
-        transform: scale(3) translate(100px, 100px);
+        color: lightblue;
 
     }
   }
@@ -485,40 +482,77 @@ a, a:visited{
 /* ======== line 11 & 12 animations ======== */
 /* https://fossheim.io/writing/posts/react-text-splitting-animations/ */
 .life{
-    color: tomato;
+    
     display: inline-flex;
     position: relative;
     bottom: -1em;
     opacity: 0;
-    animation: lifeOne 0.75s forwards infinite;
-    animation-delay: 4s;
+    animation: lifeOne 0.75s forwards;
+    animation-delay: 2s;
+    /* text-shadow: 0 0 15px white; */
+
   }
 
+  .lifeOne:nth-child(1n) { color: tomato;}
   .lifeOne:nth-child(2n) { color: lightseagreen; }
   .lifeOne:nth-child(3n) { color: orange; }
   .lifeOne:nth-child(4n) { color: dodgerblue; }
-  .lifeOne:nth-child(5n) { color: blueviolet; }
   
   @keyframes lifeOne {
     0% {
-      bottom: -0.2em;
+      /* bottom: -0.2em; */
       opacity: 1;
+      transform: scale(1), translate(25px, -20px);
+    
+
     }
     
     50% {
-      bottom: 0.4em;
+      /* bottom: 0.4em; */
+      transform: scale(2), translate(25px, -20px);
+      
     }
   
     100% {
-      bottom: 0;
+      /* bottom: 0; */
       opacity: 1;
+      transform: scale(2)translate(25px, -20px);
+
+    }
+  }
+
+  #eyesTwo{
+    opacity: 0;
+    display: inline-block;
+    animation: eyesTwo 4s forwards;
+    animation-delay: 4s;
+    
+
+  
+  
+  }
+
+  @keyframes eyesTwo {
+    0%{
+        transform: scale(1) translate(0px,0px);
+        opacity: 0;
+
+    }
+
+     50%{
+        opacity: 0;
+    } 
+    100%{
+        transform: scale(3) translate(-50px, 30px);
+        color: lightblue;
+        opacity: 1;
+
     }
   }
 
 
 
-
-#eyesPosOne {
+/* #eyesPosOne {
     position: absolute;
     display: flex;
     top: 500px;
@@ -564,11 +598,12 @@ a, a:visited{
     animation: eyesPosTwo 5s forwards infinite ease-in;
     animation-direction: both;
     animation-delay: 12s;
-}
+    
+} */
 
 
 
-@keyframes eyesPosTwo {
+/* @keyframes eyesPosTwo {
     0%{
         opacity: 0;
         left: 65%;
@@ -628,9 +663,9 @@ a, a:visited{
 
     }
     
-}
+} */
 
-#eyesPosFour{
+/* #eyesPosFour{
     position: absolute;
     display: flex;
     opacity: 0;
@@ -666,8 +701,8 @@ a, a:visited{
 
 
     }
-    
-}
+     
+}*/
 
 
 /* ======== line 13 animations ======== */
@@ -683,10 +718,12 @@ a, a:visited{
     100%{
         transform: scale(2);
         color: #ff2525;
+        text-shadow: 0 0 25px white; 
     }
 }
 
 #surprised{
+    opacity: 0;
     animation: surprised 2s forwards ease-in;
     animation-delay: 1s;
 }
@@ -706,11 +743,10 @@ a, a:visited{
 
 footer{
         color: white;
-        text-shadow: 1px 1px black;
+        /* text-shadow: 1px 1px black; */
         position: fixed;
-        bottom: 1%;
+        top: 1%;
         right: 1%;
-        text-align: right;
         z-index: 99;
         
 }
