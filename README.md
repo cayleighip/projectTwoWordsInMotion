@@ -52,6 +52,9 @@ Orange (255, 165, 0)
 Dodger Blue (30, 144, 255)
 
 # Acknowledgments
+General Resourse Used
+(https://www.w3schools.com/)
+
 Glow Effect
 (https://www.w3schools.com/howto/howto_css_glowing_text.asp)
 
