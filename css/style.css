@@ -285,7 +285,7 @@ a, a:visited{
     }
     100%{
         opacity: 1;
-        transform: translateX(100px);
+        transform: translateX(60px);
     }
 }
 
