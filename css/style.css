@@ -12,7 +12,7 @@ html{
     text-transform: uppercase;
     letter-spacing: 3px;
     color: white;
-    font-size: 28px;
+    font-size: 35px;
 }
 
 
@@ -289,6 +289,7 @@ a, a:visited{
     }
 }
 
+/* https://www.w3schools.com/howto/howto_css_glowing_text.asp */
 #glow {
     animation: glow 1s forwards infinite;
     animation-delay: 4.5s;
@@ -493,7 +494,7 @@ a, a:visited{
 
 
 /* ======== line 11 & 12 animations ======== */
-/* https://fossheim.io/writing/posts/react-text-splitting-animations/ */
+/* https://fossheim.io/writing/posts/react-text-splitting-animations/ Mainly liked the color choices used here  */
 .life{
     
     display: inline-flex;
@@ -502,7 +503,7 @@ a, a:visited{
     opacity: 0;
     animation: lifeOne 0.75s forwards;
     animation-delay: 2s;
-    /* text-shadow: 0 0 15px white; */
+    
 
   }
 
@@ -513,23 +514,22 @@ a, a:visited{
   
   @keyframes lifeOne {
     0% {
-      /* bottom: -0.2em; */
       opacity: 1;
-      transform: scale(1), translate(25px, -20px);
+      transform: scale(1), translate(30px, -30px);
     
 
     }
     
     50% {
-      /* bottom: 0.4em; */
-      transform: scale(2), translate(25px, -20px);
+    
+      transform: scale(2), translate(30px, -30px);
       
     }
   
     100% {
-      /* bottom: 0; */
+     
       opacity: 1;
-      transform: scale(2)translate(25px, -20px);
+      transform: scale(2)translate(30px, -30px);
 
     }
   }
@@ -565,157 +565,6 @@ a, a:visited{
 
 
 
-/* #eyesPosOne {
-    position: absolute;
-    display: flex;
-    top: 500px;
-    left: 60%;
-    opacity: 0;
-    color: lightblue;
-    animation: eyesPosOne 5s forwards infinite ease-in;
-    animation-direction: both;
-    animation-delay: 12s;
-}
-
-@keyframes eyesPosOne {
-    0%{
-        opacity: 0;
-        left: 60%;
-        transform: scale(1.25);
-        color: lightblue;
-    }
-    50%{
-        opacity: 1;
-        left: 65%;
-        transform: scale(1.5);
-        color: lightblue;
-       
-    }
-    100%{
-        opacity: 1;
-        left: 60%;
-        transform: scale(1.75);
-        color: lightblue;
-      
-    }
-    
-}
-
-#eyesPosTwo{
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    color: lightblue;
-    top: 500px;
-    left: 65%;
-    animation: eyesPosTwo 5s forwards infinite ease-in;
-    animation-direction: both;
-    animation-delay: 12s;
-    
-} */
-
-
-
-/* @keyframes eyesPosTwo {
-    0%{
-        opacity: 0;
-        left: 65%;
-        transform: scale(1.25);
-        color: lightblue;
-    }
-    50%{
-        opacity: 1;
-        left: 70%;
-        transform: scale(1.5);
-        color: lightblue;
-       
-
-    }
-    100%{
-        opacity: 1;
-        left: 65%;
-        transform: scale(1.75);
-        color: lightblue;
-        
-    }
-    
-}
-
-#eyesPosThree{
-    position: absolute;
-    display: flex;
-    color: lightblue;
-    opacity: 0;
-    top: 500px;
-    left: 70%;
-    animation: eyesPosThree 5s forwards infinite ease-in;
-    animation-direction: both;
-    animation-delay: 12s;
-}
-
-@keyframes eyesPosThree {
-    0%{
-        opacity: 0;
-        left: 70%;
-        transform: scale(1.25);
-        color: lightblue;
-    }
-    50%{
-        opacity: 1;
-        left: 75%;
-        transform: scale(1.5);
-        color: lightblue;
-        
-    }
-    100%{
-        opacity: 1;
-        left: 70%;
-        transform: scale(1.75);
-        color: lightblue;
-        
-
-    }
-    
-} */
-
-/* #eyesPosFour{
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    color: lightblue;
-    top: 500px;
-    left: 75%;
-    animation: eyesPosFour 5s forwards infinite ease-in;
-    animation-direction: both;
-    animation-delay: 12s;
-}
-
-@keyframes eyesPosFour {
-    0%{
-        opacity: 0;
-        top: 500px;
-        left: 75%;
-        transform: scale(1.25);
-        color: lightblue;
-    }
-    50%{
-        opacity: 1;
-        left: 80%;
-        transform: scale(1.5);
-        color: lightblue;
-        
-
-    }
-    100%{
-        opacity: 1;
-        left: 75%;
-        transform: scale(1.75);
-        color: lightblue;
-
-
-    }
-     
-}*/
 
 
 /* ======== line 13 animations ======== */
@@ -729,7 +578,7 @@ a, a:visited{
         transform: scale(1);
     }
     100%{
-        transform: scale(2);
+        transform: scale(2) translate(100px, -50px);
         color: #ff2525;
         text-shadow: 0 0 25px white; 
     }
@@ -738,17 +587,16 @@ a, a:visited{
 #surprised{
     opacity: 0;
     animation: surprised 2s forwards ease-in;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 @keyframes surprised {
     0% {
         opacity: 0;
-        transform: translate(100px, 100px); 
     }
 
     100% {
         opacity: 1;
-        transform: translate(300px, 200px); 
+        transform: translate(200px, 100px); 
    
     }
 }
@@ -756,7 +604,6 @@ a, a:visited{
 
 footer{
         color: white;
-        /* text-shadow: 1px 1px black; */
         position: fixed;
         top: 1%;
         right: 1%;
