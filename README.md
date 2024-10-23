@@ -4,7 +4,7 @@ Words in Motion - Birds of a Feather by Billie Eilish
 
 # Project Overview
 
-Exploring the concept of community through written word in an interactive experience. The song "Birds of a Feather" by Billie Eilish was chosen because to me, community is unity in shared experiences and the importance of supporting one another as life goes on. My interpretation of how the song refers to community is by having a reliable support system that encourages individual growth while maintaining a connection, no matter how much time has passed. As the song states, in a community, birds of a feather do stick together. 
+Exploring the concept of community through written word in an interactive experience. The song "Birds of a Feather" by Billie Eilish was chosen because to me, community is unity in shared experiences and the importance of supporting one another as life goes on. My interpretation of how the song refers to community is by having a reliable support system that encourages individual growth while maintaining a connection, no matter how much time has passed. As the song states, in a community, I believe that birds of a feather do stick together. 
 
 
 
